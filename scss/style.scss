@@ -1,0 +1,167 @@
+$font: 'Libre Franklin', sans-serif;
+$primary-color: hsl(223, 87%, 63%);
+$secondary-color1: hsl(223, 100%, 88%);
+$secondary-color2: hsl(354, 100%, 66%);
+$neutral-color1: hsl(0, 0%, 59%);
+$neutral-color2:hsl(209, 33%, 12%);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+input{
+    font-family: $font;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+p{
+    color: $neutral-color2;
+}
+
+h1{
+    color: $neutral-color1;
+}
+
+h1,
+p,
+.logo,
+.form-control,
+footer{
+    text-align: center;
+}
+
+header{
+    padding-top: 84px;
+    padding-bottom: 35px;
+}
+
+.logo img{
+    width: 100%;
+    max-width: 54px;
+}
+
+.row{
+    padding: 0 27px;
+}
+
+input[type="text"],
+input[type="submit"]{
+    border-radius: 40px;
+    border: 2px solid $secondary-color1;
+    padding: 13px 30px;
+    font-size: 0.75rem;
+}
+
+.showcase{
+    padding-bottom: 112px;
+
+    h1{
+        margin-bottom: 17px;
+        font-weight: 400;
+        font-size: 1.375rem;
+
+        span{
+            font-weight: 700;
+            color: $neutral-color2;
+        }
+    }
+
+    p{
+        font-size: .75rem;
+    }
+
+    form{
+        margin-top: 32px;
+        padding: 0 19px;
+
+        .form-control{
+            margin-bottom: 12px;
+
+            input{
+                display: block;
+                width: 100%;
+            }
+
+            .email.error{
+                border-color: $secondary-color2;
+            }
+
+            span{
+                font-size: 0.625rem;
+                font-style: italic;
+                margin-top: 5px;
+                display: none;
+                color: $secondary-color2;
+            }
+
+            .email-control.error-active{
+                display: block;
+            }
+
+            input[type="submit"]{
+                color:#fff;
+                background-color: $primary-color;
+                border-color: transparent;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover{
+                background-color: lighten($primary-color, 10%);
+            }
+
+        }
+    }
+
+
+
+    img{
+        margin-top: 60px;
+        width: 100%;
+    }
+}
+
+footer{
+    padding-bottom: 34px;
+
+    .copyright{
+        font-size: 0.625rem;
+        color: $neutral-color1;
+    }
+}
+
+.social-link{
+    margin-bottom: 25px;
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        li{
+            list-style-type: none;
+
+            a{
+                color: $primary-color;
+
+                span{
+                    height: 32px;
+                    width: 32px;
+                    border: 1px solid $neutral-color1;
+                    border-radius: 50%;
+                    padding: 7px;
+                }
+            }
+
+            a:hover span{
+                color: lighten($primary-color, 10%);
+            }
+        }
+    }
+}
+
+@import 'responsive';
